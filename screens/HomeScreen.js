@@ -8,6 +8,7 @@ import {
     AdjustmentsHorizontalIcon
 } from "react-native-heroicons/outline";
 import Categories from '../components/Categories';
+import Sections from '../components/Sections';
 
 
 const HomeScreen = () => {
@@ -56,6 +57,24 @@ contentContainerStyle={{
 {/* Categories */}
 
 <Categories />
+
+<Sections 
+    id="1"
+    title="Nearest Restaurants"
+    description="Below are the Restaurants closest to your current location."
+/>
+
+<Sections 
+    id="2"
+    title="Up to 70% Discounts"
+    description="Order your favourite meals cheaper."
+/>
+
+<Sections 
+    id="3"
+    title="Top Rated Restaurants"
+    description="These are the most popular and highest rated restaurants."
+/>
 
 </ScrollView>
 
