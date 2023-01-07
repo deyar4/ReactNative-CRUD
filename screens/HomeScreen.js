@@ -58,7 +58,7 @@ return (
     <SafeAreaView className="bg-gray-50 pt-5">
         { /* Header */}
     <View className="flex-row pb-3 items-center mx-4 space-x-2">
-        <Image source={{uri: 'https://links.papareact.com/wru'}}
+        <Image source={{uri: 'https://cdn-icons-png.flaticon.com/512/2202/2202112.png'}}
         className='h-10 w-10 bg-gray-300 p-5 ml-3 rounded-full' />
         <View className="flex-1 mr-3">
             <Text className="font-bold text-gray-400 text-xs">Order Now!</Text>
