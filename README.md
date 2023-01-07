@@ -2,6 +2,8 @@
 
 ### This is a simple CRUD (Create, Read, Update, Delete) app built with React Native. It allows the user to create, read, update, and delete items from a list.
 
+![](https://im3.ezgif.com/tmp/ezgif-3-0a0645bac1.gif)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
