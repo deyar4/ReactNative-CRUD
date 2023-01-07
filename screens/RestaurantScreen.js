@@ -7,6 +7,7 @@ import {ArrowLeftIcon,
         StarIcon
         } from "react-native-heroicons/solid"; 
 import Item from '../components/Item';
+import BasketIcon from '../components/BasketIcon';
 
 
 const RestaurantScreen = () => {
@@ -54,6 +55,9 @@ const RestaurantScreen = () => {
 
     console.log(items)
   return (
+    <>
+    <BasketIcon />
+
     <ScrollView>
 
         {/* Header Img */}
@@ -107,6 +111,8 @@ const RestaurantScreen = () => {
             </View>
       </View>
     </ScrollView>
+
+    </>
   )
 }
 
