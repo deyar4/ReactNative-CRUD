@@ -63,6 +63,20 @@ const DeliveryScreen = () => {
         identifier = "origin"
         />
       </MapView>
+
+      <SafeAreaView className = "bg-white flex-row items-center h-28 space-x-5">
+        <Image 
+        source = {{
+            uri: "https://cdn-icons-png.flaticon.com/512/3063/3063822.png"
+        }}
+        className = "h-12 w-12 bg-gray-300 p-4 rounded-full ml-5"
+        />
+        <View className = "flex-1">
+            <Text className = "text-lg">Dyar Bakr</Text>
+            <Text className= "text-gray-400">Your Rider</Text>
+        </View>
+        <Text className="text-[#E02E3A] text-lg mr-5 font-bold">Call</Text>
+      </SafeAreaView>
     </View>
   )
 }
