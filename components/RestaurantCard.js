@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import {StarIcon, MapPinIcon} from "react-native-heroicons/outline";
+import { useNavigation } from '@react-navigation/native';
 
 function loadRestaurants () {
     axios.get('http://10.0.0.2:1337/api/restaurants')
@@ -28,8 +29,26 @@ const RestaurantCard = ({
     lat,
 }) => {
 
+
+    const navigation = useNavigation();
+
   return (
-    <TouchableOpacity className="bg-white mr-3 shadow rounded-xl">
+    <TouchableOpacity 
+    onPress={() => {
+        navigation.navigate('Restaurant', {
+            id,
+            imgUrl,
+            title,
+            rating,
+            type,
+            address,
+            description,
+            items,
+            long,
+            lat, 
+        })
+    }}
+    className="bg-white mr-3 shadow rounded-xl">
      <Image source={{
         uri: imgUrl,
      }}

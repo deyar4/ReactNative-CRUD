@@ -4,7 +4,8 @@
   "info": {
     "singularName": "restaurant",
     "pluralName": "restaurants",
-    "displayName": "Restaurants"
+    "displayName": "Restaurants",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,16 +21,6 @@
     "description": {
       "type": "text"
     },
-    "imgUrl": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "rating": {
       "type": "decimal"
     },
@@ -44,6 +35,9 @@
     },
     "lat": {
       "type": "float"
+    },
+    "imgUrl": {
+      "type": "text"
     }
   }
 }
