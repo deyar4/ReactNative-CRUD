@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add axios
+  /usr/local/bin/node /usr/local/bin/yarn add @reduxjs/toolkit
 
 PATH: 
   /Users/deyar/opt/anaconda3/bin:/Users/deyar/opt/anaconda3/condabin:/Users/matchai/.cargo/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands

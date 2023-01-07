@@ -6,8 +6,6 @@ import {ArrowLeftIcon,
         MapPinIcon,
         StarIcon
         } from "react-native-heroicons/solid"; 
-import axios from "axios";
-import { BASE_URL } from '../config';
 import Item from '../components/Item';
 
 
