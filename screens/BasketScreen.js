@@ -83,22 +83,28 @@ const BasketScreen = () => {
             }
         </ScrollView>
 
-        <View className = "flex-col space-y-1 bg-white">
+        <View className = "flex-col space-y-0 bg-white">
             <View className = "flex-row justify-between m-8">
-                <Text>Subtotal</Text>
-                <Text>{basketTotal} IQD</Text>
+                <Text className = "text-gray-500">Subtotal</Text>
+                <Text className = "text-gray-500">{basketTotal} IQD</Text>
             </View>
 
             <View className = "flex-row justify-between m-8">
-                <Text>delivery Fee</Text>
+                <Text className = "text-gray-500">delivery Fee</Text>
                 {/* Since this is just a Demo i am not calculating per distance */}
-                <Text>2000 IQD</Text> 
+                <Text className = "text-gray-500">2000 IQD</Text> 
             </View>
 
             <View className = "flex-row justify-between m-8">
-                <Text>Total Amount</Text>
-                <Text>{basketTotal + 2000} IQD</Text>
+                <Text className = "text-gray-500">Total Amount</Text>
+                <Text className = "font-bold">{basketTotal + 2000} IQD</Text>
             </View>
+            <TouchableOpacity
+            className="bg-[#E01E3A] rounded-lg m-4 p-4"
+            onPress={() => navigation.navigate('OrderPreparation')}
+            >
+                <Text className = "text-center text-white text-lg font-bold">Place Order</Text>
+            </TouchableOpacity>
         </View>
         </View>
     </SafeAreaView>
