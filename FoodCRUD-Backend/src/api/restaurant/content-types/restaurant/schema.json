@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurants",
+  "info": {
+    "singularName": "restaurant",
+    "pluralName": "restaurants",
+    "displayName": "Restaurants"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rid": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "imgUrl": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "type": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "long": {
+      "type": "float"
+    },
+    "lat": {
+      "type": "float"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { View, Text, Image, SafeAreaView, TextInput, ScrollView } from 'react-native'
-import React, {useLayoutEffect} from 'react'
+import React, {useLayoutEffect, useState, useEffect} from 'react'
 import { useNavigation } from '@react-navigation/native'
 import {
     UserIcon,
@@ -9,19 +9,35 @@ import {
 } from "react-native-heroicons/outline";
 import Categories from '../components/Categories';
 import Sections from '../components/Sections';
+import axios from "axios";
+
 
 
 const HomeScreen = () => {
 
     const navigation = useNavigation();
+    const [sectionTypes, setSectionTypes] = useState([])
+    const baseUrl = "http://192.168.1.143:1337/api/restaurants";
+    const api = axios.create({
+        baseURL: baseUrl
+    })
+    api.get('/').then(res => {
+        console.log(res.data)
+    }).catch(error => console.log(error));   
+
 useLayoutEffect(() => {
     navigation.setOptions({
         headerShown: false,
     });
 }, []);
 
+useEffect(() => {
+
+}, [])
+
+
 return (
-    <SafeAreaView className="bg-white pt-5">
+    <SafeAreaView className="bg-gray-50 pt-5">
         { /* Header */}
     <View className="flex-row pb-3 items-center mx-4 space-x-2">
         <Image source={{uri: 'https://links.papareact.com/wru'}}
