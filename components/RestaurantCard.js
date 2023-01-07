@@ -3,18 +3,6 @@ import React from 'react'
 import {StarIcon, MapPinIcon} from "react-native-heroicons/outline";
 import { useNavigation } from '@react-navigation/native';
 
-function loadRestaurants () {
-    axios.get('http://10.0.0.2:1337/api/restaurants')
-      .then(({ data }) => {
-        setNotes(data.data);
-        setLoading(false);
-      })
-      .catch((e) => {
-        console.error(e);
-        setError('An error occurred, please try again later.');
-        setLoading(false);
-      });
-  }
 
 const RestaurantCard = ({
     id,
@@ -30,7 +18,7 @@ const RestaurantCard = ({
 }) => {
 
 
-    const navigation = useNavigation();
+    const navigation = useNavigation(); 
 
   return (
     <TouchableOpacity 

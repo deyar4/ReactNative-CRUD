@@ -6,10 +6,32 @@ import {ArrowLeftIcon,
         MapPinIcon,
         StarIcon
         } from "react-native-heroicons/solid"; 
+import axios from "axios";
+import { BASE_URL } from '../config';
+import Item from '../components/Item';
 
 
 const RestaurantScreen = () => {
     const navigation = useNavigation();
+    // const [Items, setItems] = useState([])
+    // const [loading, setLoading] = useState(true);
+
+    // const getData = async () => {
+    //     try {
+    //       setLoading(true)
+    //       await axios.get(BASE_URL + '/restaurant').then(res => {
+    //         setItems(res.data.data);
+    //         setLoading(false);
+    //       });
+    //     } catch (err) {
+    //       console.log(err);
+    //     }
+    //   };
+      
+    //   useEffect(() => {
+    //     getData(); 
+    // }, [])
+
 
     const {
         params: {
@@ -31,6 +53,8 @@ const RestaurantScreen = () => {
       })
 
     }, [])    
+
+    console.log(items)
   return (
     <ScrollView>
 
@@ -63,8 +87,25 @@ const RestaurantScreen = () => {
             </View>
             <Text className= "text-gray-400 text-md">{description}</Text>
         </View>
+
+        {/* Menu Items Area */}
             <View>
                 <Text className="text-2xl font-bold px-4 pt-6 mb-3 text-gray-600">Menu</Text>
+
+                {items.data.map((item) => (
+                    <Item 
+                        key = {item.attributes.iid}
+                        iid = {item.attributes.iid}
+                        name = {item.attributes.name}
+                        description = {item.attributes.description}
+                        price = {item.attributes.price}
+                        img = {item.attributes.img}
+                    />
+                )
+
+                )}
+
+
             </View>
       </View>
     </ScrollView>

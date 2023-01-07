@@ -17,7 +17,7 @@ const Sections = ({id, title, description}) => {
     const getData = async () => {
         try {
           setLoading(true)
-          await axios.get(BASE_URL + '/restaurants').then(res => {
+          await axios.get(BASE_URL + '/restaurants?populate=*').then(res => {
             setRestaurants(res.data.data);
             setLoading(false);
           });
@@ -29,7 +29,7 @@ const Sections = ({id, title, description}) => {
       useEffect(() => {
         getData(); 
     }, [])
-    console.log(Restaurants)
+    // console.log(Restaurants)
   return (
     <View className="p-4">
         <View className="flex-row space-x-2 items-center mt-4 justify-between">
@@ -57,7 +57,7 @@ const Sections = ({id, title, description}) => {
     type = {restaurant.attributes.type}
     address = {restaurant.attributes.address}
     description = {restaurant.attributes.description}
-    items = {[]}
+    items = {restaurant.attributes.items}
     long = {restaurant.attributes.long}
     lat = {restaurant.attributes.lat}
 />
