@@ -8,10 +8,13 @@ import {ArrowLeftIcon,
         } from "react-native-heroicons/solid"; 
 import Item from '../components/Item';
 import BasketIcon from '../components/BasketIcon';
+import {useDispatch} from 'react-redux'
+import { setRestaurant } from '../slices/restaurantSlice';
 
 
 const RestaurantScreen = () => {
     const navigation = useNavigation();
+    const dispatch = useDispatch();
     // const [Items, setItems] = useState([])
     // const [loading, setLoading] = useState(true);
 
@@ -51,14 +54,29 @@ const RestaurantScreen = () => {
         headerShown: false,
       })
 
-    }, [])    
+    }, [])   
+    
+    useEffect(() => {
+        dispatch(setRestaurant({
+            id,
+            imgUrl,
+            title,
+            rating,
+            type,
+            address,
+            description,
+            items,
+            long,
+            lat,   
+        }))
+    }, [dispatch])
 
-    console.log(items)
+    // console.log(items)
   return (
     <>
     <BasketIcon />
 
-    <ScrollView>
+    <ScrollView className="bg-white">
 
         {/* Header Img */}
       <View className="relative">
@@ -91,7 +109,7 @@ const RestaurantScreen = () => {
         </View>
 
         {/* Menu Items Area */}
-            <View>
+            <View className="pb-36">
                 <Text className="text-2xl font-bold px-4 pt-6 mb-3 text-gray-600">Menu</Text>
 
                 {items.data.map((item) => (
